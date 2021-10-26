@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pl.qaaacademy.restassured.models.Product;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,7 +87,6 @@ public class BasicProductAPIVerificationTest {
                 .then()
                 .log()
                 .body();
-
     }
 
     @Test

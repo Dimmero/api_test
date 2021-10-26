@@ -1,4 +1,4 @@
-package pl.qaaacademy.restassured;
+package pl.qaaacademy.restassured.models;
 
 public class Person {
     private String email;

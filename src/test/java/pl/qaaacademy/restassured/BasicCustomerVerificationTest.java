@@ -3,13 +3,7 @@ package pl.qaaacademy.restassured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-
-import java.net.URI;
-
-import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
 
 public class BasicCustomerVerificationTest {
 

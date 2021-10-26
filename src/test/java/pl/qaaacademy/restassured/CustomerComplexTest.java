@@ -3,6 +3,7 @@ package pl.qaaacademy.restassured;
 import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pl.qaaacademy.restassured.models.Customer;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;

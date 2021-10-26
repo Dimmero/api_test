@@ -1,10 +1,17 @@
-package pl.qaaacademy.restassured;
+package pl.qaaacademy.restassured.models;
 
 public class Product {
     private String description;
     private String id;
     private int manufacturer;
     private float price;
+
+    public Product(String description, String id, int manufacturer, float price) {
+        this.description = description;
+        this.id = id;
+        this.manufacturer = manufacturer;
+        this.price = price;
+    }
 
     public Product(){
 
