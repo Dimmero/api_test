@@ -119,4 +119,30 @@ public class BasicProductAPIVerificationTest {
         Assert.assertEquals(expectedDescription, orange.getDescription());
         Assert.assertEquals(expectedPrice, orange.getPrice());
     }
+
+    @Test
+    public void shouldUpdatePriceForProductWithId3() {
+        Double newPrice = 15.3;
+        HashMap<String, Object> productData = new HashMap<>();
+        productData.put("description", "Banana");
+        productData.put("id", "3");
+        productData.put("manufacturer", "1");
+        productData.put("price", newPrice);
+        given().contentType(ContentType.JSON)
+                .body(productData).log().body()
+                .when().put(BASE_PATH_PRODUCTS + "/2")
+                .then().log().all().statusLine(containsString("OK"));
+    }
+
+    @Test
+    public void extractedProductShouldHaveExpectedDescription2() {
+        String productID = "7";
+        String expectedDescription = "Orange";
+        float expectedPrice = 10.5f;
+        Product orange = given().
+                when().get(BASE_PATH_PRODUCTS + SEPARATOR + productID)
+                .then().extract().body().as(Product.class);
+        Assert.assertEquals(expectedDescription, orange.getDescription());
+        Assert.assertEquals(expectedPrice, orange.getPrice());
+    }
 }
